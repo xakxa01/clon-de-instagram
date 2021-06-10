@@ -1,0 +1,23 @@
+$gris:#fafafa;
+$sugerencia:#8e8e8e;
+$seguir:#0095f6;
+$negro:#262626;
+$rojo:#ed4956;
+$borde:#dbdbdb;
+
+@mixin bgblanco {
+    background:white;
+}
+@mixin cnegro {
+ color:$negro;
+}
+
+@mixin tm-1 {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+@mixin bordes {
+    border: 1px solid $borde;
+}

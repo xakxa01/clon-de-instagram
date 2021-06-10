@@ -1,0 +1,576 @@
+@import "variables";
+
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $gris;
+}
+
+header {
+    @include bgblanco;
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid $borde;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 72%;
+
+    img {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
+
+.buscador {
+    border: 1px solid $borde;
+    background: $gris;
+    border-radius: 5px;
+    width: 199px;
+    height: 18px;
+    text-align: center;
+    padding: 3px;
+    margin-right: -6em;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #37a7e7;
+}
+
+.perfil-1 img {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid $borde;
+}
+
+.perfil-2 {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        border: 1px solid $borde;
+    }
+
+    .nombres {
+        margin-left: 20px;
+    }
+
+}
+
+.opciones {
+    width: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        flex-grow: 1;
+    }
+}
+
+aside {
+    background: $gris;
+    position: fixed;
+    right: 16%;
+    width: 270px;
+    order: 2;
+    z-index: 5;
+    padding-left: 28px;
+    padding-top: 4em;
+    margin-top: -1.6em;
+}
+
+.nombre-1 {
+    @include cnegro;
+    font-size: 13px;
+}
+
+.nombre-2 {
+    color: $sugerencia;
+}
+
+.sugerencias {
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 1em;
+    width: 115%;
+
+    p {
+        font-size: 25px;
+    }
+
+    a {
+        @include cnegro;
+        margin-left: 1em;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+}
+
+.usuarios {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    img {
+        @include tm-1;
+        margin-right: 1em;
+
+    }
+}
+
+.seguir {
+    color: $seguir;
+    font-size: 12px;
+    text-align: right;
+    float: right;
+    margin-top: -1.5rem;
+    margin-right: -3em;
+    font-weight: bold;
+}
+
+.usuario {
+    @include cnegro;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.relacion {
+    color: $sugerencia;
+    font-size: 13px;
+}
+
+.informacion {
+    color: $sugerencia;
+    margin-top: 2em;
+    font-size: 12px;
+}
+
+.copi {
+    color: $sugerencia;
+    margin-top: 2em;
+    font-size: 12px;
+}
+
+.contenido {
+    margin: auto;
+    padding-top: 80px;
+    margin-left: 207px;
+    margin-right: 207px;
+    display: flex;
+    background: $gris;
+}
+
+.estados {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid $borde;
+    order: 1;
+    overflow: hidden;
+    padding-left: 5px;
+    text-align: center;
+
+    input{
+        display: none;
+    }
+
+    .movimiento {
+        width: 610px;
+        height: 116px;
+        align-items: center;
+        transition: 0.7s;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.cabeza {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid $borde;
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+    }
+
+
+    a {
+        margin-top: 6px;
+        position: absolute;
+        right: 40%;
+    }
+}
+
+.perfil-3 {
+    margin-left: 1em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.perfil-4 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 7px;
+}
+
+.publicacion {
+    width: 615px;
+    margin-top: 24px;
+}
+
+.publicacion-1 {
+    @include bordes;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 60px;
+}
+
+.pu-1 {
+    width: 613px;
+    height: 613px;
+    
+}
+
+.opciones-p {
+    margin-top: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+
+    a {
+        padding: 8px;
+    }
+
+    .favorito {
+        position: absolute;
+        margin-top: -10px;
+        right: 40%;
+    }
+}
+
+#likes {
+    @include cnegro;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 22px;
+
+    &::after {
+        content: " Me gusta";
+    }
+}
+
+.like {
+    cursor: pointer;
+
+    .rojo {
+        display: none;
+        margin: auto;
+    }
+
+
+    svg {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        cursor: pointer;
+    }
+
+
+
+    #cx:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx:checked~.cora {
+        display: none;
+    }
+
+    #cx-4:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx-4:checked~.cora {
+        display: none;
+    }
+
+
+    input {
+        display: none;
+    }
+
+
+    @keyframes escala {
+        0% {
+            scale: 1;
+        }
+
+        50% {
+            scale: 1.2;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+}
+
+.descripcion {
+    margin-top: 0.5em;
+
+    section {
+        display: flex;
+        margin-bottom: 5px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .comentario-p {
+        font-size: 13px;
+        margin-left: 5px;
+
+    }
+
+}
+
+.numero-c {
+    font-size: 15px;
+    margin-left: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: $sugerencia;
+}
+
+.c-1 {
+    display: flex;
+    margin-top: 5px;
+
+    p {
+        margin-left: 5px;
+        font-size: 13px;
+    }
+}
+
+.perfil-5 {
+    @include cnegro;
+    margin-left: 0.5em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mini-c {
+    position: absolute;
+    right: 41%;
+
+    .rojo {
+        display: none;
+        margin: auto; 
+    }
+
+    svg {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    #cx-2:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx-2:checked~.cora {
+        display: none;
+    }
+
+    #cx-3:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx-3:checked~.cora {
+        display: none;
+    }
+
+    #cx-5:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx-5:checked~.cora {
+        display: none;
+    }
+
+    #cx-6:checked~.rojo {
+        animation-name: escala;
+        animation-duration: 0.3s;
+        display: block;
+    }
+
+    #cx-6:checked~.cora {
+        display: none;
+    }
+
+
+    input {
+        display: none;
+    }
+}
+
+.tiempo {
+    margin-left: 0.5em;
+    color: $sugerencia;
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+.comenta {
+
+    display: flex;
+
+    a {
+        position: absolute;
+        right: 40%;
+        margin-top: 2%;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    input {
+        margin-top: 7px;
+        width: 94.7%;
+        height: 56px;
+        @include bordes;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: $sugerencia;
+    }
+}
+
+.comentarios {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.b-estado {
+    position: absolute;
+    margin-left: -4px;
+    margin-top: -17px;
+    z-index: 1;
+}
+
+
+
+.boton-r {
+    width: 25px;
+    height: 29px;
+    position: absolute;
+    right: 39%;
+    margin-top: 3%;
+    background: url(../image/boton-1.png) no-repeat;
+    z-index: 335;
+    cursor: pointer;
+}
+
+.boton-l {
+    width: 25px;
+    height: 29px;
+    position: absolute;
+    background: url(../image/boton-1.png) no-repeat;
+    rotate: 180deg;
+    left: 15.9%;
+    margin-top: 3%;
+    z-index: 335;
+    cursor: pointer;
+    // display: none;
+    // border-style: solid;
+}
+
+#movee:checked~ .movimiento{
+    margin-left: -85%;
+}
+
+#movee:checked~ .estado{
+    z-index: 1;
+}
+
+.color {
+    background: url(../image/borde-estados.png) no-repeat;
+    width: 66px;
+    height: 66px;
+}
+
+.estado {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    z-index: 2;
+
+    .p-estado {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        border: 1px solid white;
+        margin-top: 3.5px;
+    }
+}
+
+.borde-estado{
+    background: url(../image/borde-publicacion.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    margin-right: -39.6px;
+    margin-bottom: -1px;
+}
+
+.name-1::before{
+    content: "sr_humor";
+    margin-left: -3px;
+}
+
+.name-2::before{
+    content: "ignacia7u7";
+    margin-left: -3px;
+}
+
+.name-3::before{
+    content: "The_master012";
+    margin-left: -3px;
+}

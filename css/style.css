@@ -1,0 +1,427 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth; }
+
+body {
+  background: #fafafa; }
+
+header {
+  background: white;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 6; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 72%; }
+  .menu img {
+    margin-left: 10px;
+    margin-top: 5px; }
+
+.buscador {
+  border: 1px solid #dbdbdb;
+  background: #fafafa;
+  border-radius: 5px;
+  width: 199px;
+  height: 18px;
+  text-align: center;
+  padding: 3px;
+  margin-right: -6em; }
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: #37a7e7; }
+
+.perfil-1 img {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb; }
+
+.perfil-2 {
+  display: flex;
+  align-items: center; }
+  .perfil-2 img {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 1px solid #dbdbdb; }
+  .perfil-2 .nombres {
+    margin-left: 20px; }
+
+.opciones {
+  width: 222px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .opciones a {
+    display: flex;
+    flex-grow: 1; }
+
+aside {
+  background: #fafafa;
+  position: fixed;
+  right: 16%;
+  width: 270px;
+  order: 2;
+  z-index: 5;
+  padding-left: 28px;
+  padding-top: 4em;
+  margin-top: -1.6em; }
+
+.nombre-1 {
+  color: #262626;
+  font-size: 13px; }
+
+.nombre-2 {
+  color: #8e8e8e; }
+
+.sugerencias {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  padding-top: 1em;
+  width: 115%; }
+  .sugerencias p {
+    font-size: 25px; }
+  .sugerencias a {
+    color: #262626;
+    margin-left: 1em;
+    font-size: 12px;
+    font-weight: bold; }
+
+.usuarios {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; }
+  .usuarios img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    margin-right: 1em; }
+
+.seguir {
+  color: #0095f6;
+  font-size: 12px;
+  text-align: right;
+  float: right;
+  margin-top: -1.5rem;
+  margin-right: -3em;
+  font-weight: bold; }
+
+.usuario {
+  color: #262626;
+  font-weight: bold;
+  font-size: 13px; }
+
+.relacion {
+  color: #8e8e8e;
+  font-size: 13px; }
+
+.informacion {
+  color: #8e8e8e;
+  margin-top: 2em;
+  font-size: 12px; }
+
+.copi {
+  color: #8e8e8e;
+  margin-top: 2em;
+  font-size: 12px; }
+
+.contenido {
+  margin: auto;
+  padding-top: 80px;
+  margin-left: 207px;
+  margin-right: 207px;
+  display: flex;
+  background: #fafafa; }
+
+.estados {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  order: 1;
+  overflow: hidden;
+  padding-left: 5px;
+  text-align: center; }
+  .estados input {
+    display: none; }
+  .estados .movimiento {
+    width: 610px;
+    height: 116px;
+    align-items: center;
+    transition: 0.7s;
+    display: flex;
+    align-items: center; }
+
+.cabeza {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-bottom: 1px solid #dbdbdb; }
+  .cabeza img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%; }
+  .cabeza a {
+    margin-top: 6px;
+    position: absolute;
+    right: 40%; }
+
+.perfil-3 {
+  margin-left: 1em;
+  font-size: 13px;
+  font-weight: bold; }
+
+.perfil-4 {
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 7px; }
+
+.publicacion {
+  width: 615px;
+  margin-top: 24px; }
+
+.publicacion-1 {
+  border: 1px solid #dbdbdb;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 60px; }
+
+.pu-1 {
+  width: 613px;
+  height: 613px; }
+
+.opciones-p {
+  margin-top: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex; }
+  .opciones-p a {
+    padding: 8px; }
+  .opciones-p .favorito {
+    position: absolute;
+    margin-top: -10px;
+    right: 40%; }
+
+#likes {
+  color: #262626;
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 22px; }
+  #likes::after {
+    content: " Me gusta"; }
+
+.like {
+  cursor: pointer; }
+  .like .rojo {
+    display: none;
+    margin: auto; }
+  .like svg {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    cursor: pointer; }
+  .like #cx:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .like #cx:checked ~ .cora {
+    display: none; }
+  .like #cx-4:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .like #cx-4:checked ~ .cora {
+    display: none; }
+  .like input {
+    display: none; }
+@keyframes escala {
+  0% {
+    scale: 1; }
+  50% {
+    scale: 1.2; }
+  100% {
+    scale: 1; } }
+.descripcion {
+  margin-top: 0.5em; }
+  .descripcion section {
+    display: flex;
+    margin-bottom: 5px;
+    padding-left: 16px;
+    padding-right: 16px; }
+  .descripcion .comentario-p {
+    font-size: 13px;
+    margin-left: 5px; }
+
+.numero-c {
+  font-size: 15px;
+  margin-left: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #8e8e8e; }
+
+.c-1 {
+  display: flex;
+  margin-top: 5px; }
+  .c-1 p {
+    margin-left: 5px;
+    font-size: 13px; }
+
+.perfil-5 {
+  color: #262626;
+  margin-left: 0.5em;
+  font-size: 13px;
+  font-weight: bold; }
+
+.mini-c {
+  position: absolute;
+  right: 41%; }
+  .mini-c .rojo {
+    display: none;
+    margin: auto; }
+  .mini-c svg {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    cursor: pointer; }
+  .mini-c #cx-2:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .mini-c #cx-2:checked ~ .cora {
+    display: none; }
+  .mini-c #cx-3:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .mini-c #cx-3:checked ~ .cora {
+    display: none; }
+  .mini-c #cx-5:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .mini-c #cx-5:checked ~ .cora {
+    display: none; }
+  .mini-c #cx-6:checked ~ .rojo {
+    animation-name: escala;
+    animation-duration: 0.3s;
+    display: block; }
+  .mini-c #cx-6:checked ~ .cora {
+    display: none; }
+  .mini-c input {
+    display: none; }
+
+.tiempo {
+  margin-left: 0.5em;
+  color: #8e8e8e;
+  font-size: 10px;
+  margin-top: 7px; }
+
+.comenta {
+  display: flex; }
+  .comenta a {
+    position: absolute;
+    right: 40%;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 13px; }
+  .comenta input {
+    margin-top: 7px;
+    width: 94.7%;
+    height: 56px;
+    border: 1px solid #dbdbdb;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #8e8e8e; }
+
+.comentarios {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.b-estado {
+  position: absolute;
+  margin-left: -4px;
+  margin-top: -17px;
+  z-index: 1; }
+
+.boton-r {
+  width: 25px;
+  height: 29px;
+  position: absolute;
+  right: 39%;
+  margin-top: 3%;
+  background: url(../image/boton-1.png) no-repeat;
+  z-index: 335;
+  cursor: pointer; }
+
+.boton-l {
+  width: 25px;
+  height: 29px;
+  position: absolute;
+  background: url(../image/boton-1.png) no-repeat;
+  rotate: 180deg;
+  left: 15.9%;
+  margin-top: 3%;
+  z-index: 335;
+  cursor: pointer; }
+
+#movee:checked ~ .movimiento {
+  margin-left: -85%; }
+
+#movee:checked ~ .estado {
+  z-index: 1; }
+
+.color {
+  background: url(../image/borde-estados.png) no-repeat;
+  width: 66px;
+  height: 66px; }
+
+.estado {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  z-index: 2; }
+  .estado .p-estado {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-top: 3.5px; }
+
+.borde-estado {
+  background: url(../image/borde-publicacion.png) no-repeat;
+  width: 45px;
+  height: 45px;
+  margin-right: -39.6px;
+  margin-bottom: -1px; }
+
+.name-1::before {
+  content: "sr_humor";
+  margin-left: -3px; }
+
+.name-2::before {
+  content: "ignacia7u7";
+  margin-left: -3px; }
+
+.name-3::before {
+  content: "The_master012";
+  margin-left: -3px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,165 @@
+@import "variables";
+
+body {
+    background: $gris;
+}
+
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $gris;
+}
+
+header {
+    @include bgblanco;
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid $borde;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 72%;
+
+    img {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
+
+.buscador {
+    border: 1px solid $borde;
+    background: $gris;
+    border-radius: 5px;
+    width: 199px;
+    height: 18px;
+    text-align: center;
+    padding: 3px;
+    margin-right: -6em;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #37a7e7;
+}
+
+.perfil-1 img {
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    border: 1px solid $negro;
+}
+
+.perfil-2 {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        border: 1px solid $borde;
+    }
+
+    .nombres {
+        margin-left: 20px;
+    }
+
+}
+
+.opciones {
+    width: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        flex-grow: 1;
+    }
+}
+
+.contenedor {
+    margin-inline: 187px;
+    padding-inline: 20px;
+    padding-top: 90px;
+}
+
+.perfil-img {
+    border-radius: 100%;
+    @include bordes;
+    width: 150px;
+    height: 150px;
+    margin-left: 4em;
+}
+
+.mi-nombre {
+    font-weight: normal;
+    @include cnegro;
+}
+
+.my-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.configuracion {
+    display: flex;
+    margin-left: -7px;
+    margin-bottom: 20px;
+
+    button {
+        padding: 5px 9px 5px 9px;
+        border-radius: 5px;
+        background: $gris;
+        @include bordes;
+        font-weight: bold;
+        @include cnegro;
+        margin: 8px;
+    }
+
+    h2,
+    .ajustes {
+        margin: 8px;
+    }
+
+}
+
+.f-publicaciones {
+    display: flex;
+    margin-bottom: 20px;
+
+    .informacion {
+        display: flex;
+        margin-right: 10px;
+
+        p {
+            margin-right: 5px;
+            font-weight: bold;
+            @include cnegro;
+        }
+    }
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.grupo{
+    margin-left: 6.3em;
+}
